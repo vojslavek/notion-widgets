@@ -2,106 +2,92 @@
 <html>
 
 <head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
 
-	<!-- Google Font -->
+    <!-------->
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
 
-	<!-------->
+        body {
+            background-color: #000; /* Black background */
+        }
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
+        .navMenu {
+            font-family: 'Truculenta', sans-serif;
+            padding: 12px 24px; /* Increased padding for larger size */
+            text-align: center;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            margin: 7px auto;
+            width: 100%; /* Make nav bar take the full width */
+        }
 
+        .navMenu a {
+            color: #f8f4f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px 15px; /* Increased padding for larger size */
+        }
 
-		.navMenu {
-			font-family: 'Truculenta', sans-serif;
-			padding: 8px;
-			text-align: center;
-			font-weight: 500;
- 			font-style: normal;
- 			font-variation-settings:
- 			"wdth" 100;
-			margin: 7px auto;
-			width: fit-content;
+        .background {
+            background-color: #292828;
+        }
 
-		}
+        .border {
+            border: 1px solid #fff;
+        }
 
-		.navMenu a {
-			color: #f8f4f4;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline-block;
-			padding: 6px;
-		}
-
-		.background {
-			background-color: #292828;
-		}
-
-		.border {
-			border: 1px solid #fffffff;
-
-		}
-
-		.navMenu a:hover {
-
-			color: #c0bcbc;
-		}
-	</style>
+        .navMenu a:hover {
+            color: #c0bcbc;
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="navMenu border background">
+        <a id="fall '24 semester" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-school"></i> fall '24 semester</a>
+        <a id="this week..." onclick="navigate(this.id)" href="#"><i class="fa-solid fa-calendar-days"></i> this week...</a>
+        <a id="cna work" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-user-doctor"></i> cna work</a>
+        <a id="projects" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-brush"></i> projects</a>
+        <a id="brightspace" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-book"></i> brightspace</a>
+        <a id="mypurdue" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-p"></i> mypurdue</a>
+    </nav>
 
-	<nav class="navMenu  border background">
-		<a id="fall '24 semester" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-school"></i></i> fall '24 semester</a>
-		<a id="this week..." onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-days"></i></i> this week...</a>
-		<a id="cna work" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user-doctor"></i></i> cna work</a>
-		<a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-brush"></i></i> projects</a>
-		<a id="brightspace" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i></i> brightspace</a>
-		<a id="mypurdue" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-p"></i></i> mypurdue</a>
+    <script>
+        let direction = "horizontal";
+        if (direction === "vertical") {
+            document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+        }
 
-	</nav>
-
-
-	<script>
-
-		let direction = "horizontal";
-		if (direction === "vertical") {
-			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
-		}
-
-
-		function navigate(id) {
-
-			if (id == 'fall '24 semester')
-				window.open("https://www.notion.so/fall-2024-e5b0cc7adf2b4f6a9234abfe46a1e6f6", '_blank').focus();
-			else if (id == 'this week...')
-				window.open("https://www.notion.so/this-week-30f6c4ad9fa745c2b76240b1c8c7d406", '_blank').focus();
-			else if (id == 'cna work')
-				window.open("https://www.notion.so/work-9416ce0622d24a9a949cb9033d6a90eb", '_blank').focus();
-			else if (id == 'brightspace')
-				window.open("https://purdue.brightspace.com/d2l/home", '_blank').focus();
-			else if (id == 'projects')
-				window.open("https://www.notion.so/projects-16b541fb2ee3499b9432d01dedbf636ce", '_blank').focus();
-			else if (id == 'mypurdue')
-				window.open("https://experience.elluciancloud.com/mypurdue", '_blank').focus();
-
-			
-			
-		}
-	</script>
-
-
+        function navigate(id) {
+            if (id == "fall '24 semester")
+                window.open("https://www.notion.so/fall-2024-e5b0cc7adf2b4f6a9234abfe46a1e6f6", '_blank').focus();
+            else if (id == 'this week...')
+                window.open("https://www.notion.so/this-week-30f6c4ad9fa745c2b76240b1c8c7d406", '_blank').focus();
+            else if (id == 'cna work')
+                window.open("https://www.notion.so/work-9416ce0622d24a9a949cb9033d6a90eb", '_blank').focus();
+            else if (id == 'brightspace')
+                window.open("https://purdue.brightspace.com/d2l/home", '_blank').focus();
+            else if (id == 'projects')
+                window.open("https://www.notion.so/projects-16b541fb2ee3499b9432d01dedbf636ce", '_blank').focus();
+            else if (id == 'mypurdue')
+                window.open("https://experience.elluciancloud.com/mypurdue", '_blank').focus();
+        }
+    </script>
 </body>
 
 </html>
