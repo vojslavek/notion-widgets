@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <style>
+        body {
+            font-family: 'Truculenta', sans-serif;
+            text-align: center;
+            font-weight: 550;
+            font-style: normal;
+            font-variant-caps: all-petite-caps;
+            background-color: #000000;
+            color: #FFFFFF;
+            line-height: 1.2; 
+        }
+        .widget {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 95%;
+            margin: auto;
+            border: 3px solid #FFFFFF;
+            border-radius: 5px;
+            box-shadow: 2px 2px 1px 0px #FFFFFF;
+            padding-bottom: 20px;
+	    background-color: #292828;
+        }
+        .greet {
+            font-size: 3em;
+        }
+        .date, .clock {
+            font-family: 'Truculenta', sans-serif;
+            text-align: center;
+            font-weight: 550;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            font-size: 2em;
+        }
+        .time {
+            display: inline-block;
+            min-width: 20px;
+        }
+        .colon {
+            font-size: 1em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="widget">
+        <div class="greet" id="greet"></div>
+        <div class="date" id="date"></div>
+        <div class="clock">
+            <div class="time" id="hour"></div>
+            <div class="colon">:</div>
+            <div class="time" id="min"></div>
+            <div class="colon">:</div>
+            <div class="time" id="sec"></div>
+        </div>
+    </div>
+</div>
+<script>
+    function displayGreetings(today) {
+        let hrs = today.getHours();
+        let name = "Lea!";
+        let greet;
+        if (hrs < 12)
+            greet = 'Good Morning, ' + name;
+        else if (hrs >= 12 && hrs <= 17)
+            greet = 'Good Afternoon, ' + name;
+        else if (hrs >= 17 && hrs <= 24)
+            greet = 'Good Evening, ' + name;
+        document.getElementById('greet').innerHTML = greet;
+    }
+    function displayDate(today) {  
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let dayName = days[today.getDay()];
+        let monthName = monthNames[today.getMonth()];
+        let date = today.getDate();
+        let year = today.getFullYear();
+        document.getElementById('date').innerHTML = dayName + ", " + monthName + " " + date + " " + year;
+    }
+    function displayClock(today) {
+        let hour = padZeros(twelveHour(today.getHours()));
+        let minutes = padZeros(today.getMinutes());
+        let seconds = padZeros(today.getSeconds());
+        seconds += today.getHours() >= 12 ? " pm" : " am";
+        document.getElementById('hour').innerHTML = hour;
+        document.getElementById('min').innerHTML = minutes;
+        document.getElementById('sec').innerHTML = seconds;
+    }
+    function twelveHour(hour) {
+        if (hour > 12) return hour -= 12;
+        else if (hour === 0) return hour = 12;
+        else return hour;
+    }
+    function padZeros(num) {
+        return num < 10 ? '0' + num : num;
+    }
+    function displayWidget() {
+        let today = new Date();
+        displayGreetings(today);
+        displayDate(today);
+        displayClock(today);
+        setTimeout(displayWidget, 500);
+    }
+    displayWidget();
+</script>
+</body>
+</html>
+
