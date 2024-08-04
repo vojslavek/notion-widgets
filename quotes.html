@@ -23,7 +23,7 @@
         }
 
         .widget {
-            padding: 5px;
+            padding: 20px;
             color: #ffffff;
             text-align: center;
             max-width: 95%;
@@ -31,6 +31,10 @@
             font-variant-caps: petite-caps;
             font-size: 2em;
             background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
         }
 
         div {
@@ -56,43 +60,51 @@
 
     <script>
         const quotes = [
-            "Learning, like success, is anything but a linear process",
-            "I am in competition with no one. I have no desire to play the game of being better than anyone. I am simply trying to be better than the person I was yesterday.",
-            "If you want to be interesting, you have to be interested.",
-            "It's supposed to be hard. If it were easy, everyone would do it.",
-            "Don’t worry if you’re not where you want to be yet. Great things take time.",
-            "If it's important you'll find a way. If it's not, you'll find an excuse.",
-            "Most people overestimate what they can do in one year and underestimate what they can do in ten years.",
-            "A goal without a plan is just a wish.",
-            "Change your 24 hours and you'll change your life.",
-            "Stop thinking you are not qualified, not fit, or not experienced enough.",
-            "Growth takes place when you start doing stuff you are not qualified to do.",
-            "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
-            "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-            "I came from nothing, and I rose to the top. My journey was paved with obstacles, but each one made me stronger.",
-            "Where others had comfort, I had struggle. Where they had ease, I had to fight.",
-            "You see a polished product; I see a journey of grit and perseverance.",
-            "My triumphs are not just achievements—they are victories over the trials others never faced.",
-            "Success means more when you've clawed your way up from the bottom.",
-            "I carved my path through adversity.",
-            "Success is sweetest when it is a product of the harshest struggles.",
-            "I didn't have a safety net; I built my own.",
-            "I turned my trials into triumphs, a feat many never had to achieve.",
-            "My journey from hardship to success is a testament to my strength.",
-            "I didn't start at the top; I built my way up with determination and grit.",
-            "Adversity honed my skills in a way that comfort never could.",
-            "I rose from obscurity through sheer effort, and that makes me exceptional.",
-            "Where others had a head start, I forged my own path through hard work.",
-            "My background of struggle provided me with a strength others lack.",
-            "I turned obstacles into opportunities, a journey that few can claim.",
-            "While others had it easy, I transformed hardship into achievement.",
-            "Success is a product of my perseverance and your circumstance.",
-            "I turned every struggle into a stepping stone to success.",
-            "My journey from struggle to success is what sets me apart.",
-            "Adversity taught me lessons that comfort never could.",
-            "Every challenge I overcame made my success that much sweeter.",
-            "My path to success was built on a foundation of hardship.",
-            "The struggle I faced shaped my success in ways that ease never could.",
+            "learning, like success, is anything but a linear process",
+            "i am in competition with no one. i have no desire to play the game of being better than anyone. i am simply trying to be better than the person i was yesterday.",
+            "if you want to be interesting, you have to be interested.",
+            "it's supposed to be hard. if it were easy, everyone would do it.",
+            "don’t worry if you’re not where you want to be yet. great things take time.",
+            "if it's important you'll find a way. if it's not, you'll find an excuse.",
+            "most people overestimate what they can do in one year and underestimate what they can do in ten years.",
+            "a goal without a plan is just a wish.",
+            "change your 24 hours and you'll change your life.",
+            "stop thinking you are not qualified, not fit, or not experienced enough.",
+            "growth takes place when you start doing stuff you are not qualified to do.",
+            "be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+            "twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. so throw off the bowlines. sail away from the safe harbor. catch the trade winds in your sails. explore. dream. discover.",
+            "i came from nothing, and i rose to the top. my journey was paved with obstacles, but each one made me stronger.",
+            "where others had comfort, i had struggle. where they had ease, i had to fight.",
+            "you see a polished product; i see a journey of grit and perseverance.",
+            "my triumphs are not just achievements—they are victories over the trials others never faced.",
+            "success means more when you've clawed your way up from the bottom.",
+            "while others enjoyed privilege, i carved my path through adversity.",
+            "my struggle was my education; my perseverance was my practice.",
+            "money can't buy wisdom",
+            "success is sweetest when it is a product of the harshest struggles.",
+            "i didn't have a safety net; i built my own.",
+            "my challenges made me who i am, and that makes me better.",
+            "you may have walked a smoother path, but mine was paved with effort and sacrifice.",
+            "i turned my trials into triumphs, a feat many never had to achieve.",
+            "struggles are my strength, and that sets me apart.",
+            "while you had resources, i had resilience.",
+            "my journey from hardship to success is a testament to my strength.",
+            "i didn't start at the top; i built my way up with determination and grit.",
+            "adversity honed my skills in a way that comfort never could.",
+            "i rose from obscurity through sheer effort, and that makes me exceptional.",
+            "where others had a head start, i forged my own path through hard work.",
+            "my background of struggle provided me with a strength others lack.",
+            "i turned obstacles into opportunities, a journey that few can claim.",
+            "while others had it easy, i transformed hardship into achievement.",
+            "success is a product of my perseverance and your just circumstance.",
+            "i turned my struggles into their stepping stones.",
+            "my journey from struggle to success is what sets me apart.",
+            "adversity taught me lessons that comfort never could.",
+            "challenges that others will never comprehend make success more meaningful.",
+            "my achievements are not just results; they are victories over the obstacles of my past.",
+            "i turned my struggles into a roadmap for success.",
+            "i fought for every bit of my success.",
+            "if you think they're in the 97%, they probably are, and if they're not, they were probably set up not to be."
         ];
 
         const INTERVAL = 86400000; // 24 hours in milliseconds
@@ -112,3 +124,4 @@
 
 </body>
 </html>
+
