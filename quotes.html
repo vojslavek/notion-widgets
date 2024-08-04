@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Truculenta', sans-serif;
+            color: white;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .widget {
+            padding: 5px 5px;
+            color: white;
+            text-align: center;
+            max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        div {
+            width: 95%;
+            min-height: 100px;
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+    <script>
+        const quotes = [
+            "Learning, like success, is anything but a linear process.",
+            "I am in competition with no one. I have no desire to play the game of being better than anyone. I am simply trying to be better than the person I was yesterday.",
+            "If you want to be interesting, you have to be interested.",
+            "It's supposed to be hard. If it were easy, everyone would do it.",
+            "Don’t worry if you’re not where you want to be yet. Great things take time.",
+            "If it's important you'll find a way. If it's not, you'll find an excuse.",
+            "Most people overestimate what they can do in one year and underestimate what they can do in ten years.",
+            "A goal without a plan is just a wish.",
+            "Change your 24 hours and you'll change your life.",
+            "Stop thinking you are not qualified, not fit, or not experienced enough.",
+            "Growth takes place when you start doing stuff you are not qualified to do.",
+            "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+            "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
+            // Additional 50 quotes
+            "Your struggle is your strength. Rise above the noise.",
+            "From the ashes, we rise stronger. Never forget that.",
+            "Those who have not faced adversity will never understand your strength.",
+            "Your past does not define you. Your actions do.",
+            "The harder the struggle, the more glorious the triumph.",
+            "Never let the ease of others dictate your worth.",
+            "You are the architect of your own destiny, forged in struggle.",
+            "Rise above the challenges, for they are the path to greatness.",
+            "Strength is born from overcoming the toughest battles.",
+            "Embrace your journey, for it has made you who you are.",
+            "Your resilience is your greatest asset.",
+            "When you come from nothing, everything you achieve is monumental.",
+            "Success is sweetest when earned through hardship.",
+            "Never underestimate the power of a determined soul.",
+            "The harder you fight, the sweeter the victory.",
+            "Your struggles are the bedrock of your success.",
+            "The fight to rise from dust makes you unbreakable.",
+            "You are stronger because you faced the storms and emerged.",
+            "Every obstacle is a stepping stone to greatness.",
+            "Your journey from dust to triumph is your greatest story.",
+            "In the end, it's not the smooth path but the rugged one that defines you.",
+            "You’re stronger than those who’ve never had to fight for anything.",
+            "The battles you face are the ones that build your strength.",
+            "Emerging from hardship is a mark of true strength.",
+            "Your resilience shines brighter than the easiest successes.",
+            "The fire of adversity forges the strongest steel.",
+            "You are a testament to strength through adversity.",
+            "The dust you rise from makes your success shine brighter.",
+            "Strength comes not from ease but from the struggle.",
+            "Every challenge you overcome makes you stronger.",
+            "Your journey from struggle to success is your greatest triumph.",
+            "Rise above the easy path; it’s the challenging one that shapes greatness.",
+            "You are the embodiment of strength and perseverance.",
+            "Success achieved through hardship is the most rewarding.",
+            "The path less traveled is the one that defines true strength.",
+            "Your strength is a beacon forged in the fires of adversity.",
+            "The hardest battles often yield the greatest victories.",
+            "From the dust of struggle rises the strongest souls.",
+            "You are stronger than any obstacle placed before you.",
+            "Triumph is sweetest when born from struggle.",
+            "Your struggles shape you into a force of nature.",
+            "The path of hardship is the one that leads to greatness.",
+            "Your journey from adversity to success is a testament to your strength.",
+            "The struggles you face now are the victories of tomorrow.",
+            "Strength is the result of overcoming what was once a challenge.",
+            "You rise stronger with every obstacle you overcome.",
+            "From the dust of adversity, your strength emerges."
+        ];
+
+        const INTERVAL = 86400000;
+
+        function displayQuote() {
+            document.getElementById('widget').innerHTML = quotes[0];
+            quotes.forEach((quote, i) => {
+                setTimeout(() => {
+                    document.getElementById('widget').innerHTML = quote;
+                }, i * INTERVAL);
+            });
+        }
+
+        function displayWidget() {
+            displayQuote();
+            setTimeout(displayWidget, quotes.length * INTERVAL);
+        }
+
+        displayWidget();
+    </script>
+
+</body>
+</html>
