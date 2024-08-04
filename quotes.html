@@ -13,37 +13,38 @@
     <style>
         body {
             font-family: 'Truculenta', sans-serif;
-            color: white;
-            background-color: black;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
             margin: 0;
             padding: 0;
+            background-color: #000;
+            color: #fff;
         }
 
         .widget {
-            padding: 5px 5px;
-            color: white;
+            padding: 5px;
+            color: #ffffff;
             text-align: center;
             max-width: 95%;
             margin: auto;
             font-variant-caps: petite-caps;
             font-size: 2em;
-            font-weight: 500;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
+            background-color: #000;
         }
 
         div {
             width: 95%;
             min-height: 100px;
             background:
-                linear-gradient(to right, black 4px, transparent 4px) 0 0,
-                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
-                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
-                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
-                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
-                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
-                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
-                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+                linear-gradient(to right, white 4px, transparent 4px) 0 0,
+                linear-gradient(to right, white 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, white 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, white 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, white 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, white 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, white 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, white 4px, transparent 4px) 100% 100%;
             background-repeat: no-repeat;
             background-size: 20px 20px;
         }
@@ -55,7 +56,7 @@
 
     <script>
         const quotes = [
-            "Learning, like success, is anything but a linear process.",
+            "Learning, like success, is anything but a linear process",
             "I am in competition with no one. I have no desire to play the game of being better than anyone. I am simply trying to be better than the person I was yesterday.",
             "If you want to be interesting, you have to be interested.",
             "It's supposed to be hard. If it were easy, everyone would do it.",
@@ -68,73 +69,45 @@
             "Growth takes place when you start doing stuff you are not qualified to do.",
             "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
             "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-            // Additional 50 quotes
-            "Your struggle is your strength. Rise above the noise.",
-            "From the ashes, we rise stronger. Never forget that.",
-            "Those who have not faced adversity will never understand your strength.",
-            "Your past does not define you. Your actions do.",
-            "The harder the struggle, the more glorious the triumph.",
-            "Never let the ease of others dictate your worth.",
-            "You are the architect of your own destiny, forged in struggle.",
-            "Rise above the challenges, for they are the path to greatness.",
-            "Strength is born from overcoming the toughest battles.",
-            "Embrace your journey, for it has made you who you are.",
-            "Your resilience is your greatest asset.",
-            "When you come from nothing, everything you achieve is monumental.",
-            "Success is sweetest when earned through hardship.",
-            "Never underestimate the power of a determined soul.",
-            "The harder you fight, the sweeter the victory.",
-            "Your struggles are the bedrock of your success.",
-            "The fight to rise from dust makes you unbreakable.",
-            "You are stronger because you faced the storms and emerged.",
-            "Every obstacle is a stepping stone to greatness.",
-            "Your journey from dust to triumph is your greatest story.",
-            "In the end, it's not the smooth path but the rugged one that defines you.",
-            "You’re stronger than those who’ve never had to fight for anything.",
-            "The battles you face are the ones that build your strength.",
-            "Emerging from hardship is a mark of true strength.",
-            "Your resilience shines brighter than the easiest successes.",
-            "The fire of adversity forges the strongest steel.",
-            "You are a testament to strength through adversity.",
-            "The dust you rise from makes your success shine brighter.",
-            "Strength comes not from ease but from the struggle.",
-            "Every challenge you overcome makes you stronger.",
-            "Your journey from struggle to success is your greatest triumph.",
-            "Rise above the easy path; it’s the challenging one that shapes greatness.",
-            "You are the embodiment of strength and perseverance.",
-            "Success achieved through hardship is the most rewarding.",
-            "The path less traveled is the one that defines true strength.",
-            "Your strength is a beacon forged in the fires of adversity.",
-            "The hardest battles often yield the greatest victories.",
-            "From the dust of struggle rises the strongest souls.",
-            "You are stronger than any obstacle placed before you.",
-            "Triumph is sweetest when born from struggle.",
-            "Your struggles shape you into a force of nature.",
-            "The path of hardship is the one that leads to greatness.",
-            "Your journey from adversity to success is a testament to your strength.",
-            "The struggles you face now are the victories of tomorrow.",
-            "Strength is the result of overcoming what was once a challenge.",
-            "You rise stronger with every obstacle you overcome.",
-            "From the dust of adversity, your strength emerges."
+            "I came from nothing, and I rose to the top. My journey was paved with obstacles, but each one made me stronger.",
+            "Where others had comfort, I had struggle. Where they had ease, I had to fight.",
+            "You see a polished product; I see a journey of grit and perseverance.",
+            "My triumphs are not just achievements—they are victories over the trials others never faced.",
+            "Success means more when you've clawed your way up from the bottom.",
+            "I carved my path through adversity.",
+            "Success is sweetest when it is a product of the harshest struggles.",
+            "I didn't have a safety net; I built my own.",
+            "I turned my trials into triumphs, a feat many never had to achieve.",
+            "My journey from hardship to success is a testament to my strength.",
+            "I didn't start at the top; I built my way up with determination and grit.",
+            "Adversity honed my skills in a way that comfort never could.",
+            "I rose from obscurity through sheer effort, and that makes me exceptional.",
+            "Where others had a head start, I forged my own path through hard work.",
+            "My background of struggle provided me with a strength others lack.",
+            "I turned obstacles into opportunities, a journey that few can claim.",
+            "While others had it easy, I transformed hardship into achievement.",
+            "Success is a product of my perseverance and your circumstance.",
+            "I turned every struggle into a stepping stone to success.",
+            "My journey from struggle to success is what sets me apart.",
+            "Adversity taught me lessons that comfort never could.",
+            "Every challenge I overcame made my success that much sweeter.",
+            "My path to success was built on a foundation of hardship.",
+            "The struggle I faced shaped my success in ways that ease never could.",
         ];
 
-        const INTERVAL = 86400000;
+        const INTERVAL = 86400000; // 24 hours in milliseconds
 
         function displayQuote() {
-            document.getElementById('widget').innerHTML = quotes[0];
-            quotes.forEach((quote, i) => {
-                setTimeout(() => {
-                    document.getElementById('widget').innerHTML = quote;
-                }, i * INTERVAL);
-            });
+            let i = 0;
+            function showNextQuote() {
+                document.getElementById('widget').innerHTML = quotes[i];
+                i = (i + 1) % quotes.length;
+                setTimeout(showNextQuote, INTERVAL);
+            }
+            showNextQuote();
         }
 
-        function displayWidget() {
-            displayQuote();
-            setTimeout(displayWidget, quotes.length * INTERVAL);
-        }
-
-        displayWidget();
+        displayQuote();
     </script>
 
 </body>
