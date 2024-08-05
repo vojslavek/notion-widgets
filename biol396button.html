@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --grey-light: #d3d3d3; /* Lighter grey accent */
+            --grey-dark: #a9a9a9; /* Darker grey for box-shadow */
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Truculenta', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            font-family: 'Truculenta', sans-serif;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+        }
+
+        button i, button span {
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+            color: var(--black); /* Ensure icon color matches text color */
+        }
+
+        button i {
+            margin-right: 8px; /* Space between icon and text */
+            font-size: 1.2em; /* Adjust icon size if needed */
+        }
+
+        button:hover i, button:hover span {
+            text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #FFFFFF; /* Glow effect */
+            transform: scale(1.1); /* Slightly increase text size on hover */
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center; /* Center icon and text */
+            margin: 10px;
+            font-size: 18px;
+            text-transform: uppercase; /* Ensure text is in all caps */
+            color: var(--black); /* Black text */
+            background-color: var(--white); /* White background */
+            padding: 15px 60px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 0px var(--grey-dark);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--grey-light); /* Lighter grey background on hover */
+        }
+
+        .btn.threeD:active {
+            box-shadow: 0 0;
+            background-color: var(--grey-dark); /* Darker grey background when active */
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn threeD" type="button" onclick="navigate()">
+        <i class="fa-solid fa-stethoscope"></i>
+        <span>BIOL 396</span>
+    </button>
+  
+    <script>
+        function navigate() {
+            window.open("https://www.notion.so/BIOL-39600-de34d4cee1f64120a11c39350eefc27e", '_parent').focus();
+        }
+    </script>
+</body>
+
+</html>
