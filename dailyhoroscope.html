@@ -1,1 +1,76 @@
-<iframe style="min-width:100%; min-height: 100px;" src="//mydailyhoroscope.org/widget.php?bc=000000&fc=FFFFFF" width="100%" frameborder="0" scrolling="no"></iframe><script type="text/javascript" src="//mydailyhoroscope.org/js/iframeResizer.js"></script>
+<html lang="en">
+<head>
+    <title>Daily Horoscope</title>
+    <meta name="description" content="View your free daily horoscope at MyDailyHoroscope.org, find out what is next on your daily astrological path.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://mydailyhoroscope.org/css/MyDailyHoroscope.css" media="screen">
+    <link rel="stylesheet" href="https://mydailyhoroscope.org/css/custom.css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="//mydailyhoroscope.org/js/iframeResizer.contentWindow.js"></script>
+    <style>
+        body.shimeji-pinned iframe {
+            pointer-events: none;
+        }
+        body.shimeji-select-ie {
+            cursor: cell !important;
+        }
+        #shimeji-contextMenu::-webkit-scrollbar {
+            width: 6px;
+        }
+        #shimeji-contextMenu::-webkit-scrollbar-thumb {
+            background-color: rgba(128,128,128,0.6); /* Grey */
+            border-radius: 3px;
+        }
+        #shimeji-contextMenu::-webkit-scrollbar-thumb:hover {
+            background: #888; /* Darker Grey */
+        }
+        body {
+            background-color: #000000; /* Black */
+            color: #FFFFFF; /* White */
+        }
+        a, .linkWhite {
+            color: #FFFFFF; /* White */
+        }
+        .img-fluid {
+            border-color: #808080; /* Grey border for images */
+        }
+    </style>
+    <meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.5">
+</head>
+<body>
+    <p class="centerText"><font color="#FFFFFF"><strong>Daily Horoscopes</strong><br>Aug 6, 2024</font></p>
+    <div class="row center" style="padding:9px;">
+        <div class="col-lg-2 col-md-3 col-sm-3 col-4 centerAll" style="padding-bottom:12px;">
+            <a href="https://mydailyhoroscope.org/widget.php?sign=Capricorn&amp;bc=000000&amp;fc=FFFFFF&amp;fs=12&amp;h=">
+                <img src="https://mydailyhoroscope.org/images/capricorn-horoscope.gif" class="img-fluid" style="border-radius: 8px;" alt="Capricorn Daily Horoscope">
+            </a><br>
+            <div style="line-height:1.1; font-size:14px;">
+                <a href="https://mydailyhoroscope.org/widget.php?sign=Capricorn&amp;bc=000000&amp;fc=FFFFFF&amp;fs=12&amp;h=">
+                    <strong><font color="#FFFFFF">Capricorn</font></strong>
+                </a>
+            </div>
+        </div>
+        <!-- Repeat for other zodiac signs with same adjustments -->
+        <!-- Example for Aquarius -->
+        <div class="col-lg-2 col-md-3 col-sm-3 col-4 centerAll" style="padding-bottom:12px;">
+            <a href="https://mydailyhoroscope.org/widget.php?sign=Aquarius&amp;bc=000000&amp;fc=FFFFFF&amp;fs=12&amp;h=">
+                <img src="https://mydailyhoroscope.org/images/aquarius-horoscope.gif" class="img-fluid" style="border-radius: 8px;" alt="Aquarius Daily Horoscope">
+            </a><br>
+            <div style="line-height:1.1; font-size:14px;">
+                <a href="https://mydailyhoroscope.org/widget.php?sign=Aquarius&amp;bc=000000&amp;fc=FFFFFF&amp;fs=12&amp;h=" class="linkWhite">
+                    <strong><font color="#FFFFFF">Aquarius</font></strong>
+                </a>
+            </div>
+        </div>
+        <!-- Continue similarly for other signs -->
+    </div>
+    <div align="center">
+        <small>Powered by <a href="https://mydailyhoroscope.org" target="_blank"><font color="#FFFFFF">MyDailyHoroscope.org</font></a></small>
+    </div>
+    <script src="https://mydailyhoroscope.org/js/jquery.min.js"></script>
+    <script src="https://mydailyhoroscope.org/js/popper.min.js"></script>
+    <script src="https://mydailyhoroscope.org/js/bootstrap.min.js"></script>
+    <div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div>
+</body>
+</html>
