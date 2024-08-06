@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000; /* Black background */
+            font-family: 'Truculenta', sans-serif;
+        }
+
+        .navMenu {
+            display: flex;
+            justify-content: center;
+            background-color: #292828;
+            padding: 12px 24px;
+            border: 1px solid #fff;
+            margin: 7px auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navMenu a {
+            color: #f8f4f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px 15px;
+            transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+
+        .navMenu a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff;
+            transform: scale(1.15) translateZ(20px) rotateY(10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navMenu">
+        <a id="home" href="obsidian://open?vault=lea's%20vault&file=Home">Home</a>
+        <a id="fall-24-semester" href="obsidian://open?vault=lea's%20vault&file=Fall%20'24%20Semester">Fall '24 Semester</a>
+        <a id="this-week" href="obsidian://open?vault=lea's%20vault&file=This%20Week">This Week...</a>
+        <a id="cna-work" href="obsidian://open?vault=lea's%20vault&file=CNA%20Work">CNA Work</a>
+        <a id="projects" href="obsidian://open?vault=lea's%20vault&file=Projects">Projects</a>
+        <a id="brightspace" href="https://purdue.brightspace.com/d2l/home">Brightspace</a>
+        <a id="mypurdue" href="https://experience.elluciancloud.com/mypurdue">MyPurdue</a>
+    </nav>
+</body>
+
+</html>
