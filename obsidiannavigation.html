@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+    </style>
+
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap');
+    </style>
+
     <style>
         * {
             margin: 0;
@@ -20,18 +25,19 @@
 
         body {
             background-color: #000; /* Black background */
-            font-family: 'Truculenta', sans-serif;
         }
 
         .navMenu {
-            display: flex;
-            justify-content: center;
-            background-color: #292828;
-            padding: 12px 24px;
-            border: 1px solid #fff;
-            margin: 7px auto;
-            width: 100%;
+            font-family: 'Truculenta', sans-serif;
+            padding: 12px 24px; /* Increased padding for larger size */
             text-align: center;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            margin: 7px auto;
+            width: 100%; /* Make nav bar take the full width */
+            background-color: #292828; /* Background color */
+            border: 1px solid #fff; /* Border color */
         }
 
         .navMenu a {
@@ -39,8 +45,9 @@
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
-            padding: 10px 15px;
-            transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+            padding: 10px 15px; /* Increased padding for larger size */
+            transition: color 0.3s, text-shadow 0.3s, transform 0.3s; /* Smooth transition for color, text-shadow, and transform */
+            perspective: 1000px; /* Perspective for fisheye effect */
         }
 
         .navMenu a:hover {
@@ -53,14 +60,15 @@
 
 <body>
     <nav class="navMenu">
-        <a id="home" href="obsidian://open?vault=lea's%20vault&file=Home">Home</a>
-        <a id="fall-24-semester" href="obsidian://open?vault=lea's%20vault&file=Fall%20'24%20Semester">Fall '24 Semester</a>
-        <a id="this-week" href="obsidian://open?vault=lea's%20vault&file=This%20Week">This Week...</a>
-        <a id="cna-work" href="obsidian://open?vault=lea's%20vault&file=CNA%20Work">CNA Work</a>
-        <a id="projects" href="obsidian://open?vault=lea's%20vault&file=Projects">Projects</a>
+        <a id="home" href="obsidian://open?vault=lea's%20vault!&file=Home">Home</a>
+        <a id="fall-24-semester" href="obsidian://open?vault=lea's%20vault!&file=Fall%20'24%20Semester">Fall '24 Semester</a>
+        <a id="this-week" href="obsidian://open?vault=lea's%20vault!&file=This%20Week">This Week...</a>
+        <a id="cna-work" href="obsidian://open?vault=lea's%20vault!&file=CNA%20Work">CNA Work</a>
+        <a id="projects" href="obsidian://open?vault=lea's%20vault!&file=Projects">Projects</a>
         <a id="brightspace" href="https://purdue.brightspace.com/d2l/home">Brightspace</a>
         <a id="mypurdue" href="https://experience.elluciancloud.com/mypurdue">MyPurdue</a>
     </nav>
 </body>
 
 </html>
+
