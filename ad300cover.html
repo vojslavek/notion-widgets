@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+            max-width: 150px; /* Adjust the max-width to make the image appear smaller */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        .image-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://i.ibb.co/HX8Bwq3/Untitled.png") no-repeat center center;
+            background-size: contain;
+            filter: blur(10px) brightness(2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none; /* So the pseudo-element doesn't interfere with the click */
+        }
+
+        .image-container:hover:before {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container" onclick="navigate()">
+        <img src="https://i.ibb.co/HX8Bwq3/Untitled.png" alt="BIOL 439 Image">
+    </div>
+  
+    <script>
+        function navigate() {
+            window.open("https://www.notion.so/AD-30000-bf99c702ef424fa394f8161924cbcb01", '_blank').focus();
+        }
+    </script>
+</body>
+
+</html>
