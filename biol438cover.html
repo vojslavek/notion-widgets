@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image-container {
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF; /* Glow effect */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container" onclick="navigate()">
+        <img src="https://i.ibb.co/BtP6nt5/Untitled-19.png" alt="BIOL 438 Image">
+    </div>
+  
+    <script>
+        function navigate() {
+            window.open("https://www.notion.so/BIOL-43800-4d7a0d84841143498452516641deb9d2", '_blank').focus();
+        }
+    </script>
+</body>
+
+</html>
